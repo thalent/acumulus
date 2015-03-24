@@ -1,0 +1,57 @@
+{
+
+    "contacts":{
+        "contact":[
+            {
+                "contactid":"1234567",
+                "contactname":"Contactname 1",
+                "contacttypeid":"3",
+                "contacttypename":"Relatie",
+                "contactperson":{
+                },
+                "contactaddress1":"Address 1",
+                "contactaddress2":{},
+                "contactcity":"Leeuwarden",
+                "contactcountrycode":{}
+            },
+            {
+                "contactid":"3216549",
+                "contactname":"Contactname 2",
+                "contacttypeid":"3",
+                "contacttypename":"Relatie",
+                "contactperson":{
+                },
+                "contactaddress1":"Address 2",
+                "contactaddress2":{
+                },
+                "contactcity":"Drachten",
+                "contactcountrycode":{
+                }
+            },
+            {
+                "contactid":"00001",
+                "contactname":"Contactname 3",
+                "contacttypeid":"3",
+                "contacttypename":"Relatie",
+                "contactperson":{
+                },
+                "contactaddress1":"Address 3",
+                "contactaddress2":{
+                },
+                "contactcity":{
+                },
+                "contactcountrycode":"NL"
+            }
+
+
+        ]
+    },
+    "errors":{
+        "count_errors":"0"
+    },
+    "warnings":{
+        "count_warnings":"0"
+    },
+    "status":"0"
+
+}

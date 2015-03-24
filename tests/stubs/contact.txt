@@ -1,0 +1,38 @@
+{
+    "contact": {
+        "contactid": "123456",
+        "contactname1": "Company name",
+        "contactname2": {},
+        "contacttypeid": "3",
+        "contacttypename": "Relatie",
+        "contactperson": {},
+        "contactsalutation": {},
+        "contactaddress1": "Address 1",
+        "contactaddress2": {},
+        "contactpostalcode": "1234AB",
+        "contactcity": "Leeuwarden",
+        "contactcountryid": "0",
+        "contactcountrycode": {},
+        "contactcountryname": {},
+        "contacttelephone": {},
+        "contactfax": {},
+        "contactemail": "joe@example.com",
+        "contactwebsite": {},
+        "contactbankaccountnumber": {},
+        "contactiban": {},
+        "contactbic": {},
+        "contactmark": {},
+        "contactvatnumber": {},
+        "contactvatstandard": "21.00",
+        "contacttemplateid": "0",
+        "contactnotes": {},
+        "contactstatus": "1"
+    },
+    "errors": {
+        "count_errors": "0"
+    },
+    "warnings": {
+        "count_warnings": "0"
+    },
+    "status": "0"
+}
