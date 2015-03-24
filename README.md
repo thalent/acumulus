@@ -7,7 +7,7 @@ This package uses [Guzzle](https://github.com/guzzle/guzzle) to make the cUrl re
 Add the package to your composer.json file
 ```
     "require": {
-        "siegerhansma/acumulus": "~1.0"
+        "nexttalent/acumulus": "~1.0"
     },
 ```
 
@@ -20,13 +20,11 @@ All of the provider classes take a config array as parameter.
 ```
 You could put these variables in a specific config file.
 
-## Usage
-Every class and function is fully documented in the [online documentation](http://www.trixoict.nl/acumulus/namespaces/Siegerhansma.AcumulusPhp.html).
 ### Request
 The calls in the API can be called via specific classes corresponding to the categories on the official API docs. 
 To start, create a new instance of the provider class you need.
 ```
-    $client = new \Siegerhansma\AcumulusPhp\Providers\ContactsProvider($config);
+    $client = new \NextTalent\AcumulusPhp\Providers\ContactsProvider($config);
 ```
 After that, all the calls in that class will be available via the $client variable. 
 ```
@@ -42,7 +40,7 @@ In the example below is the response of the getAvailableContacts method on the C
 ```
 array(3) {
   [0] =>
-  class Siegerhansma\AcumulusPhp\Models\Contact#68 (27) {
+  class NextTalent\AcumulusPhp\Models\Contact#68 (27) {
     protected $contactid =>
     string(7) "1234567"
     protected $contactname1 =>
@@ -99,7 +97,7 @@ array(3) {
     NULL
   }
   [1] =>
-  class Siegerhansma\AcumulusPhp\Models\Contact#91 (27) {
+  class NextTalent\AcumulusPhp\Models\Contact#91 (27) {
     protected $contactid =>
     string(7) "3216549"
     protected $contactname1 =>
@@ -156,7 +154,7 @@ array(3) {
     NULL
   }
   [2] =>
-  class Siegerhansma\AcumulusPhp\Models\Contact#69 (27) {
+  class NextTalent\AcumulusPhp\Models\Contact#69 (27) {
     protected $contactid =>
     string(5) "00001"
     protected $contactname1 =>
@@ -228,7 +226,7 @@ To (hopefully) make this a little bit easier for you, I made an InvoiceBuilder c
     $invoiceBuilder = new InvoiceBuilder;
     
     // Create a new contact by instantiating a new Contact model or get it from the API
-    $builder = new \Siegerhansma\AcumulusPhp\ContactsProvider($config);
+    $builder = new \NextTalent\AcumulusPhp\ContactsProvider($config);
     $contact = $builder->getContactDetails(123456)->sendRequest();
     
     // Set the customer by passing in the Contact model
@@ -253,7 +251,7 @@ To (hopefully) make this a little bit easier for you, I made an InvoiceBuilder c
     $invoiceBuilder->addLine($invoiceLine);
     
     // Pass the InvoiceBuilder into the addInvoice method on the InvoicesProvider and call the build method on it
-    $invoiceSender = new \Siegerhansma\AcumulusPhp\InvoicesProvider($config);
+    $invoiceSender = new \NextTalent\AcumulusPhp\InvoicesProvider($config);
     $response = $invoiceSender->addInvoice($invoiceBuilder->build())->sendRequest();
 ```
 
