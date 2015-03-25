@@ -1,7 +1,12 @@
-<?php namespace NextTalent\AcumulusPhp\Models;
+<?php
+
+namespace NextTalent\AcumulusPhp\Models;
 
 class Invoice
 {
+	const STATUS_DUE = 1;
+	const STATUS_PAID = 2;
+
     protected $concept;
     protected $number;
     protected $vattype;
