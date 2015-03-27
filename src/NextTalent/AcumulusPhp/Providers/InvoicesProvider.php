@@ -57,8 +57,12 @@ class InvoicesProvider extends AcumulusConnector
         return $this;
     }
 
-    public function setPaymentStatus($token, $paymentstatus = 1, $paymentdate)
+    public function setPaymentStatus($token, $paymentstatus = 1, $paymentdate = null)
     {
+		 if($paymentdate === null) {
+			 $paymentdate = date('Y-m-d');
+		 }
+
         // Validate paymentdate before sending it off
         $datetime = \DateTime::createFromFormat("Y-m-d", $paymentdate);
         if (!$datetime and $datetime->format('Y-m-d') !== $paymentdate) {
