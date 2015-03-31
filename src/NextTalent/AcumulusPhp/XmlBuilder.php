@@ -30,6 +30,9 @@ class XmlBuilder
 
         $xml = '<?xml version="1.0" encoding="UTF-8"?>';
         $xml .= '<myxml>';
+			 if(!empty($config['testmode'])) {
+				 $xml .= '<testmode>1</testmode>';
+			 }
         $xml .= '<format>json</format>';
         $xml .= '<contract>';
         $xml .= sprintf('<contractcode>%d</contractcode>', $config['contractcode']);

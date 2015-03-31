@@ -146,4 +146,10 @@ class InvoiceBuilder
 		$this->emailAsPdf = $email;
 	}
 
+	/**
+	 * @return InvoiceLine[]
+	 */
+	public function getInvoiceLines() {
+		return $this->invoiceLines;
+	}
 }

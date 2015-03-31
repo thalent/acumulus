@@ -46,7 +46,7 @@ class ResponseParser
         if ($response['status'] == 1) {
             throw new AcumulusException($response['errors']['error']['message']);
         } elseif ($response['status'] > 1) {
-            throw new AcumulusException($response['warnings']['warning']['message']);
+            throw new AcumulusException(current($response['warnings']['warning'])['message']);
         }
 
         // Get the key from the first element from the response

@@ -1,6 +1,7 @@
 <?php
 
 namespace NextTalent\AcumulusPhp\Parsers;
+use NextTalent\AcumulusPhp\Models\Response\Invoice;
 
 /**
  * Class InvoiceParser
@@ -18,10 +19,10 @@ class InvoiceParser implements ParserInterface
 
     /**
      * Returns array with keys 'invoicenumber', 'token' and 'entryid'
-     * @return mixed
+     * @return Invoice
      */
     public function parse()
     {
-        return $this->invoice;
+        return new Invoice($this->invoice);
     }
 }
