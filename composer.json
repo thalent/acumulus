@@ -4,13 +4,13 @@
     "authors": [
         {
             "name": "Michiel Thalen",
-            "email": "michiel@nexttalent.nl"
+            "email": "info@thalent.nl"
         }
     ],
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=5.6.0",
 
-        "guzzlehttp/guzzle": "4.1.*"
+        "guzzlehttp/guzzle": "^6.3.0"
     },
     "require-dev": {
         "phpunit/phpunit": "4.1.*",
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-0": {
-            "NextTalent\\AcumulusPhp": "src/"
+            "Thalent\\AcumulusPhp": "src/"
         }
     },
     "minimum-stability": "stable",
