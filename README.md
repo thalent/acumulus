@@ -9,7 +9,7 @@ This package uses [Guzzle](https://github.com/guzzle/guzzle) to make the cUrl re
 Add the package to your composer.json file
 ```
     "require": {
-        "nexttalent/acumulus": "~2.0"
+        "thalent/acumulus": "~2.0"
     },
 ```
 
