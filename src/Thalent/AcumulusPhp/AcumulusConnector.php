@@ -74,7 +74,7 @@ abstract class AcumulusConnector
         $request = $this->client->post(
             $this->apiCall,
             [
-                'body' => [
+                'form_params' => [
                     'xmlstring' => $this->xml->buildXML($this->xmlPayload, $this->config)
                 ]
             ]);
