@@ -8,6 +8,7 @@
 
 namespace Thalent\AcumulusPhp;
 
+use GuzzleHttp\Psr7\Response;
 use Thalent\AcumulusPhp\Exceptions\AcumulusException;
 use Thalent\AcumulusPhp\Parsers\ContactParser;
 use Thalent\AcumulusPhp\Parsers\ContactsParser;
@@ -20,12 +21,17 @@ use Thalent\AcumulusPhp\Parsers\InvoiceParser;
  */
 class ResponseParser
 {
+	/**
+	 * @var Response
+	 */
+	protected $response;
+
     /**
-     * @param $request
+     * @param $response Response
      */
-    public function __construct($request)
+    public function __construct($response)
     {
-        $this->request = $request;
+        $this->response = $response;
     }
 
     /**
@@ -36,7 +42,7 @@ class ResponseParser
     public function parse()
     {
         // Get the response body and parse it as Json
-        $response = $this->request->json();
+        $response = \GuzzleHttp\json_decode($this->response->getBody(), true);
 
         if (!is_array($response)) {
             return $response;

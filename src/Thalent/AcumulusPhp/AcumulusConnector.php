@@ -44,7 +44,7 @@ abstract class AcumulusConnector
      */
     public function __construct(array $config)
     {
-        $this->client = new GuzzleHttp\Client(['base_url' => $this->apiUrl]);
+        $this->client = new GuzzleHttp\Client(['base_uri' => $this->apiUrl]);
         $this->xml = new XmlBuilder;
         $this->config = $config;
     }
